@@ -1,7 +1,71 @@
 {
-	"navigation": [
-		{"title": "home", "url": "/"},
-		{"title": "about", "url": "/about/"},
-		{"title": "contact", "url": "/contact/"}
-	]
+	"navigation":{
+
+		"header": [
+			{
+				"id": "collection-summer", 
+				"title": "collection summer 2015", 
+				"url": "collection-summer.html",
+				"text": "<p>shop coming soon...</p>"
+			}
+		],
+
+		"footer": [
+
+			{
+				"id": "store", 
+				"title": "store", 
+				"url": "store.html"
+			},
+
+			{
+				"id": "agencies", 
+				"title": "agencies", 
+				"url": "agencies.html"
+			},
+
+			{
+				"id": "contact", 
+				"title": "contact", 
+				"url": "contact.html"
+			}
+		]
+	},
+
+	"pages": {
+
+		"home": {
+			"images": [
+				{"id": "2", "src": "images/home/home_01.jpg"},
+				{"id": "3", "src": "images/home/home_02.jpg"},
+				{"id": "4", "src": "images/home/home_03.jpg"},
+				{"id": "5", "src": "images/home/home_04.jpg"},
+				{"id": "6", "src": "images/home/home_05.jpg"}
+			]
+		},
+
+		"collection_summer": {
+			"images": [
+				{"id": "1", "src": "images/collection_summer/summer_01.jpg"},
+				{"id": "2", "src": "images/collection_summer/summer_02.jpg"},
+				{"id": "3", "src": "images/collection_summer/summer_03.jpg"},
+				{"id": "4", "src": "images/collection_summer/summer_04.jpg"},
+				{"id": "5", "src": "images/collection_summer/summer_05.jpg"},
+				{"id": "6", "src": "images/collection_summer/summer_06.jpg"}
+			]
+		},
+
+		"agencies": {
+			"image": "images/agencies/agencies_01.jpg"
+		},
+
+		"contact": {
+			"image": "images/contact/contact_01.jpg"
+		},
+
+		"store": {
+			"image": "images/store/store_01.jpg"
+		}
+
+	}
 }

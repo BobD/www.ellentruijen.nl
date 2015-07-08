@@ -1,14 +1,108 @@
-@include respond-to(mobile) {
-
-}
-
 @include respond-to(small) {
 
+	.section__content{
+		width: 100% !important;
+		max-width: none !important;
+		min-width: 0 !important;
+		top: auto !important;
+		transform: none !important;
+		margin-top: 10em !important;
+	}
+
+	.section__content ul{
+		float: none !important;
+		display: block;
+		width: auto !important;
+		margin-right: 0 !important;
+		margin-top: 3em !important;
+
+	}
+
+	.section__content li{
+		padding: 0 30px;
+
+		&.v-space-1,
+		&.v-space-2,
+		&.v-space-3,
+		&.v-space-4{
+			margin-top: 1em !important;
+		}
+
+		&.no-wrap{
+			white-space: normal !important;
+		}
+	}
+
+	.footer{
+		.footer__logo,
+		.footer__copyright{
+			display: none;
+		}
+	}
+
+
+	body{
+		&.store,
+		&.agencies,
+		&.contact{
+
+			.header{
+				position: relative;
+				left: auto;
+				right: auto;
+			}
+
+			.section{
+				height: auto !important;
+
+				.section__content{
+					margin-bottom: 6em;
+
+					ul{
+						margin: 0;
+					}
+				}
+			}
+
+		}
+	}
+
 }
 
-@include respond-to(large) {
+@include respond-to(medium) {
+.section__content{
+		width: 100% !important;
+		max-width: none !important;
+		min-width: 0 !important;
+		top: auto !important;
+		transform: none !important;
+		margin-top: 10em !important;
+	}
+
+	.section__content ul{
+		float: none !important;
+		display: block;
+		width: auto !important;
+		margin-right: 0 !important;
+		margin-top: 3em !important;
+
+	}
+
+	.section__content li{
+		padding: 0 30px;
+
+		&.v-space-1,
+		&.v-space-2,
+		&.v-space-3,
+		&.v-space-4{
+			margin-top: 1em !important;
+		}
+	}
+}
+
+@include respond-to(x-large) {
 
 }
 
-@include respond-to(super-large) {
+@include respond-to(xx-large) {
 }

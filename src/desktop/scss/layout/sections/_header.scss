@@ -1,3 +1,14 @@
 .header{
+	text-align: center;
+	position: fixed;
+	z-index: 1;
+	top: $body__padding-vertical;
+	right: $body__padding-horizontal;
+	left: $body__padding-horizontal;
+}
 
+.header__logo{
+}
+
+.header__menu{
 }

@@ -1,3 +1,19 @@
 <header class='header'>
-	{{> helpers/navigation active=active}}
+
+	<h1 class='header__logo'>
+		<a href='/projects/ellentruijen/'>
+			<img alt='ellent truijen' src='images/logo.png' width='50' height='35'/>
+		</a>
+	</h1>
+
+	<nav class='header__menu'>
+	  <ul class='navigation'>
+	  	{{#each content.navigation.header}}
+			<li class='navigation__item{{#menu_active ../active id}}{{/menu_active}}'>
+				<a class='navigation__link' href='{{url}}'>{{title}}</a>
+			</li>
+	  	{{/each}}
+	  </ul>
+	</nav>
+
 </header>

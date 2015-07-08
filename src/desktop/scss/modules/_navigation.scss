@@ -1,5 +1,54 @@
-.navigation{
-	> ul{
-
+@mixin active(){
+	position: relative;
+	
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 2px;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background: $text-color;
+		transition: width $transition-duration;
 	}
+	
+	.active &,
+	&:hover{
+		&:before{
+			width: 100%;
+		}
+	}
+
+	.active &:hover{
+		&:before{
+			width: 100% !important;
+		}
+	}
+}
+
+.navigation{
+	display: inline;
+	line-height: inherit;
+
+	&:hover{
+		.active{
+			.navigation__link:before{
+				width: 0;
+			}
+		}
+	}
+}
+
+.navigation__item{
+	display: inline-block;
+	padding: 0 $navigation__margin;
+}
+
+.navigation__link{
+	color: inherit;
+	text-decoration: none;
+	display: inline;
+
+	@include active();
 }

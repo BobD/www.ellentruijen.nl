@@ -1,3 +1,19 @@
 <footer class='footer'>
 
+	<div class='footer__item footer__logo'>
+		ellen:truijen
+	</div>
+
+	<ul class='navigation footer__item'>
+  		{{#each content.navigation.footer}}
+			<li class='navigation__item{{#menu_active ../active id}}{{/menu_active}}'>
+				<a class='navigation__link' href='{{url}}'>{{title}}</a>
+			</li>
+  		{{/each}}
+	</ul>
+
+	<div class='footer__item footer__copyright'>
+		&copy; copyright ellen:truijen 2015
+	</div>
+
 </footer>

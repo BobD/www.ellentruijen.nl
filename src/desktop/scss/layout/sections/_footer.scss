@@ -1,3 +1,38 @@
-.footer{
+$bar-background-color: black;
 
+.footer{
+	position: fixed;
+	bottom:  0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background: $bar-background-color;
+	color: $text-color-light;
+	padding-top: 2px;
+}
+
+.footer__item,
+.footer__item.navigation{
+	line-height: $footer-height;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.footer__logo{
+	position: absolute;
+	left: 30px;
+	font-size: 1.5em;
+	margin-top: -1px;
+}
+
+.footer__logo,
+.navigation__item{
+	vertical-align: middle;
+}
+
+.footer__copyright{
+	position: absolute;
+	right: 30px;
+	font-size: .8em;
+	margin-top: 2px;
 }

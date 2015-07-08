@@ -1,6 +1,7 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  // https://www.npmjs.com/package/logfile-grunt
   require('logfile-grunt')(grunt, { clearLogFile: true });
 
   // Project configuration.
@@ -37,7 +38,12 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'src/desktop/images/', src: ['**/*.*'], dest: 'build/desktop/images', filter: 'isFile'},
           {expand: true, cwd: 'src/desktop/scripts', src: ['**/*.*'], dest: 'build/desktop/scripts', filter: 'isFile'},
           {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'build/desktop/scripts/vendors/jquery', filter: 'isFile'},
-          {expand: true, cwd: 'bower_components/underscore/', src: ['underscore-min.*'], dest: 'build/desktop/scripts/vendors/underscore', filter: 'isFile'}
+          {expand: true, cwd: 'bower_components/underscore/', src: ['underscore-min.*'], dest: 'build/desktop/scripts/vendors/underscore', filter: 'isFile'},
+          {src: 'bower_components/fastclick/lib/fastclick.js',  dest: 'build/desktop/scripts/vendors/fastclick.js'},
+          {src: 'bower_components/ScrollMagic/scrollmagic/minified/ScrollMagic.min.js',  dest: 'build/desktop/scripts/vendors/scrollmagic.min.js'},
+          {src: 'src/desktop/html/.htaccess',  dest: 'build/desktop/.htaccess'},
+          {src: 'src/desktop/html/robots.txt',  dest: 'build/desktop/robots.txt'},
+          {src: 'src/desktop/html/backgroundsize.min.htc',  dest: 'build/desktop/backgroundsize.min.htc'}
         ]
       },
       mobile: {
@@ -45,13 +51,18 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'src/mobile/images/', src: ['**/*.*'], dest: 'build/mobile/images', filter: 'isFile'},
           {expand: true, cwd: 'src/mobile/scripts', src: ['**/*.*'], dest: 'build/mobile/scripts', filter: 'isFile'},
           {expand: true, cwd: 'bower_components/underscore/', src: ['underscore-min.*'], dest: 'build/mobile/scripts/vendors/underscore', filter: 'isFile'},
-          {src: 'bower_components/fastclick/lib/fastclick.js',  dest: 'build/mobile/scripts/vendors/fastclick.js'}
+          {src: 'bower_components/fastclick/lib/fastclick.js',  dest: 'build/mobile/scripts/vendors/fastclick.js'},
+          {src: 'src/mobile/html/.htaccess',  dest: 'build/mobile/.htaccess'},
+          {src: 'src/mobile/html/robots.txt',  dest: 'build/mobile/robots.txt'},
+          {src: 'src/desktop/html/backgroundsize.min.htc',  dest: 'build/desktop/backgroundsize.min.htc'}
         ]
       },
       dist: {
         files: [
-          {expand: true, cwd: 'build/desktop', src: ['**/*.*'], dest: 'dist/desktop', filter: 'isFile'},
-          {expand: true, cwd: 'build/mobile', src: ['**/*.*'], dest: 'dist/mobile', filter: 'isFile'}
+          {expand: true, cwd: 'build/desktop', src: ['**/*.*', '**/.*', '!scripts/main.min.js'], dest: 'dist/desktop', filter: 'isFile'},
+          {src: 'build/desktop/scripts/main.min.js',  dest: 'dist/desktop/scripts/main.js'},
+          {expand: true, cwd: 'build/mobile', src: ['**/*.*', '**/.*', '!scripts/main.min.js'], dest: 'dist/mobile', filter: 'isFile'},
+          {src: 'build/mobile/scripts/main.min.js',  dest: 'dist/mobile/scripts/main.js'},
         ]
       }
     },

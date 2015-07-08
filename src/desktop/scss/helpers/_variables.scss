@@ -1,13 +1,22 @@
 // Base
-$background-color:					#B4B3AC;
-$text-color:						white;
-$link-color:						black;
-$transition-duration:				0.4s;
+$footer-height:						40px;
+$background-color:					#222222;
+$text-color:						black;
+$text-color-light:					white;
+$link-color:						$text-color;
+$transition-duration:				0.2s;
+
+// Body
+$body__padding-vertical:			1em;
+$body__padding-horizontal:			2em;
+
+// Navigation
+$navigation__margin:				.8em;
 
 // https://github.com/ianrose/typesettings
 $base-vertical-unit: 				5px;
 $base-line-multi: 					4;
-$base-font-size: 					11px;
+$base-font-size: 					14px;
 $ms-ratio: 							1.2;
 
 
@@ -17,13 +26,14 @@ $ms-ratio: 							1.2;
 // http://sassmeister.com/gist/0614ac3971ae82925ef4
 //
 // Using em's in case the page get's zoomed in
+// http://foundation.zurb.com/docs/media-queries.html
 // ----
 
 $screen:       "only screen and";
 $breakpoints: (
-  'mobile'  		: '#{$screen} ( max-width: 320px )',
-  'small'  			: '#{$screen} ( min-width: 321px )  and ( max-width: 69.999em )',
-  'medium' 			: '#{$screen} ( min-width: 70em ) and ( max-width: 84.999em )',
-  'large'  			: '#{$screen} ( min-width: 85em ) and ( max-width: 99.999em )',
-  'super-large' : '#{$screen} ( min-width: 100em )'
+  'small'  		: '#{$screen} ( max-width: 40em )',
+  'medium'  	: '#{$screen} ( min-width: 40.063em )  and ( max-width: 64em )',
+  'large' 		: '#{$screen} ( min-width: 64.063em ) and ( max-width: 90em )',
+  'x-large'  	: '#{$screen} ( min-width: 90.063em ) and ( max-width: 120em )',
+  'xx-large' 	: '#{$screen} ( min-width: 120.063em )'
 );
